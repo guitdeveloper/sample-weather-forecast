@@ -80,7 +80,7 @@ const Weather = () => {
         style={styles.input}
         placeholder="Enter the name of the city"
         value={city}
-        onChangeText={text => setCity(text.trim())}
+        onChangeText={text => setCity(text)}
       />
       <Button title="Search Forecast" onPress={getWeather} />
       {weather && (

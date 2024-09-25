@@ -1,0 +1,57 @@
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Python dependencies
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+
+# Log files
+*.log
+
+# Local settings and environment files
+*.env
+*.flaskenv
+instance/
+config.py
+
+# Database files
+*.db
+*.sqlite3
+
+# Temporary OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor generated files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Test/coverage files
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+.cache
+.pytest_cache/
+
+# Distribution/Build files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Pipenv/Poetry files
+Pipfile.lock
+poetry.lock
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/

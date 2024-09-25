@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Weather Forecast</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 style="padding-left: 20px;">Report Weather Forecast ({{ cities_count }} cities registered)</h1>
+        <button style="margin-left: 20px;" onclick="refreshPage()">Refresh</button>    
+    </div>
+    <div class="container">
+        <div class="box">
+            <h2>What are the most polluted cities?</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>Carbon Monoxide (μg/m3)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in pollution_cities %}
+                    <tr>
+                        <td>{{ row.city }}</td>
+                        <td>{{ row.carbonMonoxide }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="box-left">
+            <h2>Weather Condition in 2024 (%)</h2>
+            <div class="image-container-weather_condition">
+                <img src="{{ chart_weather_condition }}" alt="Weather Condition in 2024 (%)">
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 50px;">
+        <div class="box">
+            <h2>Evolution of Air Pollution in Sao Paulo, Moscow, Delhi and Jakarta</h2>
+            <img src="{{ chart_pollution_compare }}" alt="Evolution of Air Pollution in Sao Paulo, Moscow, Delhi and Jakarta">
+        </div>
+        <div class="box-left">
+            <h2>Quantity by Temperature Groups (°C)</h2>
+            <div class="image-container-temperature-group">
+                <img src="{{ chart_temperature_groups }}" alt="Quantity by Temperature Groups (°C)">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

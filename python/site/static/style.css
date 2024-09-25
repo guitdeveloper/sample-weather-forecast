@@ -1,0 +1,69 @@
+table {
+  width: 80%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.box {
+  padding: 20px;
+  height: 500px;
+}
+.box-left {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 50px;
+  height: 500px;
+}
+.image-container-weather_condition {
+  width: 1000px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+.image-container-weather_condition img {
+  position: absolute;
+  top: -40px;
+}
+.image-container-temperature-group {
+  width: 450px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.image-container-temperature-group img {
+  position: absolute;
+  top: -70px;
+  right: -70px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  background-color: #1f618d;
+}

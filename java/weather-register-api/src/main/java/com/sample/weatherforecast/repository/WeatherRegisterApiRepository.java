@@ -1,6 +1,6 @@
-package com.sample.repository;
+package com.sample.weatherforecast.repository;
 
-import com.sample.model.Weather;
+import com.sample.weatherforecast.model.Weather;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

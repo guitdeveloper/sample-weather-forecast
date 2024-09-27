@@ -1,13 +1,10 @@
-package com.sample.model;
+package com.sample.weatherforecast.dto;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.sample.weatherforecast.model.Weather;
 import java.time.LocalDateTime;
 
-@Document(collection = "weathers")
-public class Weather {
+public class WeatherDTO {
 
-    @Id
     private String id;
     private String city;
     private String country;
@@ -18,26 +15,26 @@ public class Weather {
     private Double carbonMonoxide;
     private LocalDateTime dateTime;
 
-    public Weather(
-        String city,
-        String country,
-        String description,
-        double temperature,
-        int humidity,
-        double windSpeed,
-        Double carbonMonoxide
-    ) {
-        this.city = city;
-        this.country = country;
-        this.description = description;
-        this.temperature = temperature;
-        this.humidity = humidity;
-        this.windSpeed = windSpeed;
-        this.carbonMonoxide = carbonMonoxide;
+    public WeatherDTO() {}
+
+    public WeatherDTO(Weather weather) {
+        this.id = weather.getId();
+        this.city = weather.getCity();
+        this.country = weather.getCountry();
+        this.description = weather.getDescription();
+        this.temperature = weather.getTemperature();
+        this.humidity = weather.getHumidity();
+        this.windSpeed = weather.getWindSpeed();
+        this.carbonMonoxide = weather.getCarbonMonoxide();
+        this.dateTime = weather.getDateTime();
     }
 
     public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getCity() {
@@ -103,5 +100,4 @@ public class Weather {
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
     }
-
 }
